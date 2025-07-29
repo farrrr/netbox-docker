@@ -7,3 +7,6 @@ services:
       - netbox-media-files:/opt/netbox/netbox/media:rw
       - netbox-reports-files:/opt/netbox/netbox/reports:rw
       - netbox-scripts-files:/opt/netbox/netbox/scripts:rw
+  netbox-worker:
+    volumes:
+      - /srv/netbox-docker/configuration:/etc/netbox/config:z,ro
